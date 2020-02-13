@@ -10,7 +10,7 @@
 <script lang = "ts">
 import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 
-export interface Post {
+export interface IPost {
   title: string;
   author: string;
   datePosted: Date;
@@ -18,7 +18,7 @@ export interface Post {
 
 @Component
 export default class BlogPost extends Vue {
-  @Prop() private post!: Post;
+  @Prop() private post!: IPost;
   @Prop() private idxData!: number;
   //comeputed
   get dateSet(): string {
